@@ -1,8 +1,12 @@
 {
-    "version": 2,
-    "builds": [{ "src": "backend/index.js", "use": "@vercel/node" }],
-    "routes": [
-      { "handle": "server" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/scrape", "dest": "backend/index.js" } 
+  ]
+}
